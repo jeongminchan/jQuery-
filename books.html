@@ -40,15 +40,30 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
-	<style>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+
+<style type="text/css">
+ a:link { text-decoration: none; color:#646464;}
+ a:visited { text-decoration: none; color:#646464;}
+ a:active { text-decoration: none; color:#646464;}
+ a:hover { text-decoration: none; color:#646464;}
+
+</style>
+
+<style>
 	      .a {font-family:   sans-serif;
 					font-weight: 900;
 					font-size : 20px;
 }
-	      .b { font-family: serif; }
+	      .b { font-family: serif;
+				font-size : 40px;}
 	      .c { font-family: sans-serif; }
 	      .d { font-family: monospace; }
-	      .e { font-family: cursive; }
+	      .e { font-family: 'Gugi', cursive;
+			font-size : 30px;
+		padding-left : 45%;
+padding-bottom : 0.5%;
+letter-spacing: 3px;}
 	      .f { font-family: 'Noto Serif KR', serif;
 			font-size : 20px;}
 	      .g { font-family: Georgia, "맑은 고딕", serif; }
@@ -480,10 +495,10 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		</div>
 		<nav class="cd-primary-nav" id="primary-nav">
 			<ul>
-				<li class="cd-label">출판사</li>
-				<li><a href="#page1">YES24</a></li>
-				<li><a href="#page2">인터넷 교보문고</a></li>
-				<li><a href="#page3">알라딘</a></li>
+				<li class="cd-label" style="color: #000">출판사</li>
+				<li><a href="#page1" style="color: #000"><p class="b">YES24</p></a></li>
+				<li><a href="#page2" style="color: #000"><p class="b">인터넷 교보문고</p></a></li>
+				<li><a href="#page3" style="color: #000"> <p class="b">알라딘</p></a></li>
 			</ul>
 		</nav>
 	</div>
@@ -507,8 +522,8 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
     </div>
 		<header class="o-header">
 		  <nav class="o-header-nav">
-		    <a href="#panel1" class="o-header-nav__link"><i class="fa fa-arrow-left"></i> login</a>
-		    <a href="#home"  class="o-header-nav__link" ><i class="fa fa-home"></i> home</a>
+		    <a href="#panel1" onfocus='this.blur()' class="o-header-nav__link" ><i class="fa fa-arrow-left"></i> login</a>
+		    <a href="#home" onfocus='this.blur()'  class="o-header-nav__link"  ><i class="fa fa-home"></i> home</a>
 		  </nav>
 		  <div class="o-container">
 		    <h1 class="o-header__title">E book</h1>
@@ -535,7 +550,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 									<ul data-role="listview" data-inset="true">
 										<p class="f" style="position: relative; left: 20%; margin-bottom: 3%;"> 주간 베스트 셀러 </p>
 										<div class="fotorama" style="position: relative;  left: 20%; margin-bottom:5%" data-width="500" data-ratio="500/300" data-max-width="100%" data-autoplay="true">
-											<img src="image/1-1.jpg">
+											<img src="image/1-1.jpg" >
 											<img src="image/1-2.jpg">
 											<img src="image/1-3.jpg">
 											<img src="image/1-4.jpg">
@@ -587,6 +602,11 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		    </div>
 		  </div>
 		</main>
+		<footer class="o-footer">
+		  <div class="o-container">
+		    <small>&copy; 2020 e book</small>
+		  </div>
+		</footer>
 		<script src="page/js/src/tabs.js"></script>
 		<script>
 			var myTabs = tabs({
@@ -598,7 +618,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		</script>
 	</div>
 
-	<div data-role="page" id="page1" data-title="첫번째 페이지">
+	<div data-role="page" id="page1" data-title="YES24">
 		<div data-role="header" class="ui-bar">
 			<a href="#page" class="ui-btn-LEFT">출판사</a>
 			<div data-role="controlgroup" data-type="horizontal" class="ui-btn-right">
@@ -606,7 +626,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 				<a href="#page2">인터넷 교보문고</a>
 			<a href="#page3">알라딘</a>
 		</div>
-			<h1>이번주 베스트 셀러</h1>
+			<p class = "e">YES24</p>
 		</div>
     <div data-role="content">
 			<div data-role="panel" id="panel3" data-display="overlay" data-position="right">
@@ -624,14 +644,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
           </ul>
       </div>
       <div id="tab1">
-				<h2 style = "color:gray; padding-left:10px;">YES24</h2>
 				<ul data-role="listview" data-inset="true">
 					<li data-role="list-divider">인문
 						 <p class="ui-li-aside">2020/6/1~7</p>
 					</li>
 					<li>
               <a href="#">
-                <img src= "image/1-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/1-1.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>1. 더해빙</h2>
                 <p>저자 이서윤, 홍주연|수오서재 |2020.03.01</p>
                 <p>페이지 344</p>
@@ -642,7 +661,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/1-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/1-2.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>2. 애쓰지 않고 편안하게</h2>
                 <p>저자 김수현|놀(다산북스) |2020.05.15</p>
                 <p>페이지 296</p>
@@ -653,7 +672,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/1-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/1-3.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>3. 코로나 투자 전쟁</h2>
                 <p>저자 정채진, 박석중, 이광수, 김한진, 김일구|페이지2북스 |2020.05.25</p>
                 <p>페이지 312</p>
@@ -664,7 +683,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/1-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/1-4.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>4. 당근 유치원(양장본 HardCover)</h2>
                 <p>저자 안녕달|창비 |2020.05.22</p>
                 <p>페이지 48</p>
@@ -675,7 +694,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/1-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/1-5.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>5. 마법천자문 48</h2>
                 <p>저자 김현수|북이십일 아울북 |2020.05.20</p>
                 <p>페이지 164</p>
@@ -687,14 +706,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
           </ul>
       </div>
       <div id="tab2">
-        <h2 style = "color:gray; padding-left:10px;">YES24</h2>
           <ul data-role="listview" data-inset="true">
 						<li data-role="list-divider">소설
                <p class="ui-li-aside">2020/6/1~7</p>
             </li>
 						<li>
               <a href="#">
-                <img src= "image/2-1.PNG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/2-1.PNG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>1. 기억1</h2>
                 <p>저자 베르나르 베르베르|역자 전미연|열린책들 |2020.05.30</p>
                 <p>페이지 400</p>
@@ -705,7 +723,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/2-2.PNG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/2-2.PNG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>2. 기억2</h2>
                 <p>저자 베르나르 베르베르|역자 전미연|열린책들 |2020.05.30</p>
                 <p>페이지 400</p>
@@ -716,7 +734,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/2-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/2-3.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>3. 소년이 온다 특별한정판(양장)</h2>
                 <p>저자 한강|창비 |2020.04.24</p>
                 <p>페이지 216</p>
@@ -727,7 +745,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/2-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/2-4.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>4. 시선으로부터,</h2>
                 <p>저자 정세랑|문학동네 |2020.06.05</p>
                 <p>페이지 340</p>
@@ -738,7 +756,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
             </li>
 						<li>
               <a href="#">
-                <img src= "image/2-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+                <img src= "image/2-5.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
                 <h2>5. 2020 제11회 젊은작가상 수상작품집</h2>
                 <p>저자 강화길, 최은영, 김봉곤, 이현석, 김초엽, 장류진, 장희원|역자 이현석|문학동네 |2020.04.08</p>
                 <p>페이지 376</p>
@@ -750,14 +768,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
           </ul>
       </div>
       <div id="tab3">
-        <h2 style = "color:gray; padding-left:10px;">YES24</h2>
 					<ul data-role="listview" data-inset="true">
 						<li data-role="list-divider">어린이
 							 <p class="ui-li-aside">2020/6/1~7</p>
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/3-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/3-1.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 								<h2>1. 마법천자문 48</h2>
 								<p>저자 김현수|북이십일 아울북 |2020.05.20</p>
 								<p>페이지 164</p>
@@ -768,7 +785,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/3-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/3-2.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 								<h2>2. 흔한남매 안 흔한 일기2</h2>
 								<p>저자 강효미|아이세움 |2020.05.26</p>
 								<p>페이지 136</p>
@@ -779,7 +796,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/3-3.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/3-3.PNG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 								<h2>3. Go Go 카카오프렌즈 14</h2>
 								<p>저자 김미영|북이십일 아울북 |2020.05.20</p>
 								<p>페이지 176</p>
@@ -790,7 +807,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/3-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/3-4.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 								<h2>4. 장군이네 떡집_만복이네 떡집 2 (난 책읽기가 좋아 시리즈)</h2>
 								<p>글 김리리 |그림 이승현|비룡소 |2020.04.29</p>
 								<p>페이지 84</p>
@@ -801,7 +818,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/3-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/3-5.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 								<h2>5. 소원 떡집_만복이네 떡집 3 (난 책읽기가 좋아 시리즈)</h2>
 								<p>글 김리리 |그림 이승현|비룡소 |2020.04.29</p>
 								<p>페이지 84</p>
@@ -813,14 +830,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</ul>
       </div>
 <div id="tab4">
-    <h2 style = "color:gray; padding-left:10px;">YES24</h2>
 		<ul data-role="listview" data-inset="true">
 			<li data-role="list-divider">인문
 				 <p class="ui-li-aside">2020/6/1~7</p>
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/4-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/4-1.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 					<h2>1. 내가 원하는 것을 나도 모를 때</h2>
 					<p>저자 전승환|다산초당 |2020.01.08</p>
 					<p>페이지 336</p>
@@ -831,7 +847,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/4-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/4-2.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 					<h2>2. 지적 대화를 위한 넓고 얕은 지식 0</h2>
 					<p>저자 채사장|웨일북(whalebooks) |2019.12.24</p>
 					<p>페이지 556</p>
@@ -842,7 +858,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/4-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/4-3.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 					<h2>3. 타인의 해석</h2>
 					<p>저자 말콤 글래드웰|역자 유강은|김영사 |2020.03.20</p>
 					<p>페이지 472 </p>
@@ -853,7 +869,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/4-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/4-4.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 					<h2>4. 당신이 옳다</h2>
 					<p>저자 정혜신|해냄출판사 |2018.10.10</p>
 					<p>페이지 316</p>
@@ -864,7 +880,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/4-5.PNG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/4-5.PNG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 					<h2>5. 사피엔스</h2>
 					<p>저자 유발 하라리|역자 조현욱|김영사 |2015.11.24</p>
 					<p>원제 Sapiens</p>
@@ -881,7 +897,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 </div>
 </div>
 
-  <div data-role="page" id="page2" data-title="두번째 페이지">
+  <div data-role="page" id="page2" data-title="인터넷 교보문고">
 		<div data-role="header" class="ui-bar">
 			<a href="#page" class="ui-btn-LEFT">출판사</a>
 			<div data-role="controlgroup" data-type="horizontal" class="ui-btn-right">
@@ -889,7 +905,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 				<a href="#page1">YES24</a>
 			<a href="#page3">알라딘</a>
 		</div>
-			<h1>이번주 베스트 셀러</h1>
+				<p class="e">인터넷 교보문고</p>
 		</div>
     <div data-role="content">
 			<div data-role="panel" id="panel3" data-display="overlay" data-position="right">
@@ -907,14 +923,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
           </ul>
       </div>
 			<div id="tab1">
-					<h2 style = "color:gray; padding-left:10px;">인터넷 교보문고</h2>
 					<ul data-role="listview" data-split-icon="search" data-inset="true" >
 						<li data-role="list-divider">종합
 							 <p class="ui-li-aside">2020/6/1~7</p>
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g1-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g1-1.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>1. 더해빙</h2>
 								<p>저자 이서윤, 홍주연|수오서재 |2020.03.01</p>
 								<p>페이지 344</p>
@@ -925,7 +940,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g1-2.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g1-2.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>2. 코로나 이후의 세계: 블룸버그 선정 세계 1위 미래학자 제이슨 솅커의 미래예언</h2>
 								<p>저자 제이슨 솅커|역자 박성현|미디어숲 |2020.05.30</p>
 								<p>페이지 200</p>
@@ -936,7 +951,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g1-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g1-3.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>3. 애쓰지 않고 편하게</h2>
 								<p>저자 김수현|놀(다산북스) |2020.05.15</p>
 								<p>페이지 296</p>
@@ -947,7 +962,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g1-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g1-4.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>4. 코로나 투자 전쟁</h2>
 								<p>저자 정채진, 박석중, 이광수, 김한진, 김일구|페이지2북스 |2020.05.25</p>
 								<p>페이지 312</p>
@@ -958,7 +973,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g1-5.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g1-5.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>5. 맛있게 살 빠지는 고단백 저탄수화물 다이어트 레시피</h2>
 								<p>저자 미니 박지우|비에이블 |2020.05.28</p>
 								<p>페이지 276</p>
@@ -970,14 +985,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</ul>
 			</div>
 			<div id="tab2">
-				<h2 style = "color:gray; padding-left:10px;">인터넷 교보문고</h2>
 					<ul data-role="listview" data-inset="true">
 						<li data-role="list-divider">소설
 							 <p class="ui-li-aside">2020/6/1~7</p>
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g2-1.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g2-1.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>1. 기억1</h2>
 								<p>저자 베르나르 베르베르|역자 전미연|열린책들 |2020.05.30</p>
 								<p>페이지 400</p>
@@ -988,7 +1002,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g2-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g2-2.JPG" style="padding-top: 10px; padding-left: 10px;" onclick="window.open(this.src)">
 								<h2>2. 소년이 온다 특별한정판(양장)</h2>
 								<p>저자 한강|창비 |2020.04.24</p>
 								<p>페이지 216</p>
@@ -999,7 +1013,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g2-3.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g2-3.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>3. 기억2</h2>
 								<p>저자 베르나르 베르베르|역자 전미연|열린책들 |2020.05.30</p>
 								<p>페이지 400</p>
@@ -1010,7 +1024,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g2-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g2-4.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>4. 시선으로부터,</h2>
 								<p>저자 정세랑|문학동네 |2020.06.05</p>
 								<p>페이지 340</p>
@@ -1021,7 +1035,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g2-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g2-5.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>5. 데미안</h2>
 								<p>저자 헤르만 헤세|더스토리 |2017.10.30</p>
 								<p>페이지 248</p>
@@ -1033,14 +1047,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</ul>
 			</div>
 			<div id="tab3">
-				<h2 style = "color:gray; padding-left:10px;">인터넷 교보문고</h2>
 					<ul data-role="listview" data-inset="true">
 						<li data-role="list-divider">아동
 							 <p class="ui-li-aside">2020/6/1~7</p>
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g3-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g3-1.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>1. 마법천자문 48</h2>
 								<p>저자 김현수|북이십일 아울북 |2020.05.20</p>
 								<p>페이지 164</p>
@@ -1051,7 +1064,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g3-2.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g3-2.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>2. Go Go 카카오프렌즈 14</h2>
 								<p>저자 김미영|북이십일 아울북 |2020.05.20</p>
 								<p>페이지 176</p>
@@ -1062,19 +1075,19 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g3-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g3-3.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>3. 흔한남매 안 흔한 일기2</h2>
 								<p>저자 강효미|아이세움 |2020.05.26</p>
 								<p>페이지 136</p>
 								<h4>가격 : 10,800원 </h4>
 								<p class="ui-li-aside">자세히보기 - </p>
 								<a href="https://book.naver.com/bookdb/book_detail.nhn?bid=16358186">
-								<img src= "image/3-3.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/3-3.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g3-4.PNG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g3-4.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>4. 흔한 남매 4</h2>
 								<p>저자 흔한남매 (원작), 백난도|아이세움 |2020.03.26</p>
 								<p>페이지 172</p>
@@ -1085,7 +1098,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 						</li>
 						<li>
 							<a href="#">
-								<img src= "image/g3-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+								<img src= "image/g3-5.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 								<h2>5. 장군이네 떡집_만복이네 떡집 2 (난 책읽기가 좋아 시리즈)</h2>
 								<p>글 김리리 |그림 이승현|비룡소 |2020.04.29</p>
 								<p>페이지 84</p>
@@ -1097,14 +1110,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</ul>
 			</div>
 			<div id="tab4">
-			<h2 style = "color:gray; padding-left:10px;">인터넷 교보문고</h2>
 			<ul data-role="listview" data-inset="true">
 			<li data-role="list-divider">인문
 				 <p class="ui-li-aside">2020/6/1~7</p>
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/g4-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/g4-1.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 					<h2>1. 내가 원하는 것을 나도 모를 때</h2>
 					<p>저자 전승환|다산초당 |2020.01.08</p>
 					<p>페이지 336</p>
@@ -1115,7 +1127,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/g4-2.PNG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/g4-2.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 					<h2>2. 설민석의 책 읽어드립니다 </h2>
 					<p>저자 설민석|단꿈아이 |2020.05.18</p>
 					<p>페이지 288</p>
@@ -1126,7 +1138,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/g4-3.PNG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/g4-3.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 					<h2>3. 큰별썜 최태성의 별★별한국사 한국사능력검정시험 심화 (상)</h2>
 					<p>저자 최태성|이투스북 |2019.12.31</p>
 					<p>페이지 312</p>
@@ -1137,7 +1149,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/g4-4.PNG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/g4-4.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 					<h2>4. 큰별썜 최태성의 별★별한국사 한국사능력검정시험 심화 (하)</h2>
 					<p>저자 최태성|이투스북 |2019.12.31</p>
 					<p>페이지 312</p>
@@ -1148,7 +1160,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			</li>
 			<li>
 				<a href="#">
-					<img src= "image/g4-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+					<img src= "image/g4-5.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 					<h2>5. 지적 대화를 위한 넓고 얕은 지식 0</h2>
 					<p>저자 채사장|웨일북(whalebooks) |2019.12.24</p>
 					<p>페이지 556</p>
@@ -1164,7 +1176,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 </div>
 </div>
 
-<div data-role="page" id="page3" data-title="세번째 페이지">
+<div data-role="page" id="page3" data-title="알라딘">
 	<div data-role="header" class="ui-bar">
 		<a href="#page" class="ui-btn-LEFT">출판사</a>
 		<div data-role="controlgroup" data-type="horizontal" class="ui-btn-right">
@@ -1172,7 +1184,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 			<a href="#page1">YES24</a>
 		<a href="#page2">인터넷 교보문고</a>
 	</div>
-		<h1>이번주 베스트 셀러</h1>
+		<p class="e">알라딘</p>
 	</div>
 	<div data-role="content">
 		<div data-role="panel" id="panel3" data-display="overlay" data-position="right">
@@ -1190,14 +1202,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 				</ul>
 		</div>
 		<div id="tab1">
-				<h2 style = "color:gray; padding-left:10px;">알라딘</h2>
 				<ul data-role="listview" data-split-icon="search" data-inset="true" >
 					<li data-role="list-divider">종합
 						 <p class="ui-li-aside">2020/6/1~7</p>
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z1-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z1-1.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>1. 시선으로부터,</h2>
 							<p>저자 정세랑|문학동네 |2020.06.05</p>
 							<p>페이지 340</p>
@@ -1208,7 +1219,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z2-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z2-2.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>2. 소년이 온다 특별한정판(양장)</h2>
 							<p>저자 한강|창비 |2020.04.24</p>
 							<p>페이지 216</p>
@@ -1219,7 +1230,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z1-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z1-3.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>3. 더해빙</h2>
 							<p>저자 이서윤, 홍주연|수오서재 |2020.03.01</p>
 							<p>페이지 344</p>
@@ -1230,7 +1241,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z1-4.PNG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z1-4.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>4. 만화 인소의 법칙 1 (함단이 캐릭터 키링 + 단이&여령 트래블 스티커 4종 세트 + 인소의 법칙 노트 포함 한정판)</h2>
 							<p>저자 아현 만화, 유한려 원작|디앤씨미디어(D&C미디어) |2020.06.17</p>
 							<p>페이지 276</p>
@@ -1241,7 +1252,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z1-5.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z1-5.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>5. 애쓰지 않고 편하게</h2>
 							<p>저자 김수현|놀(다산북스) |2020.05.15</p>
 							<p>페이지 296</p>
@@ -1253,14 +1264,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 				</ul>
 		</div>
 		<div id="tab2">
-			<h2 style = "color:gray; padding-left:10px;">알라딘</h2>
 				<ul data-role="listview" data-inset="true">
 					<li data-role="list-divider">문학
 						 <p class="ui-li-aside">2020/6/1~7</p>
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z2-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z2-1.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>1. 시선으로부터,</h2>
 							<p>저자 정세랑|문학동네 |2020.06.05</p>
 							<p>페이지 340</p>
@@ -1271,7 +1281,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z2-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z2-2.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>2. 소년이 온다 특별한정판(양장)</h2>
 							<p>저자 한강|창비 |2020.04.24</p>
 							<p>페이지 216</p>
@@ -1282,7 +1292,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z2-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z2-3.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>3. 2020 제11회 젊은작가상 수상작품집</h2>
 							<p>저자 강화길, 최은영, 김봉곤, 이현석, 김초엽, 장류진, 장희원|역자 이현석|문학동네 |2020.04.08</p>
 							<p>페이지 376</p>
@@ -1293,7 +1303,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z2-4.PNG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z2-4.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>4. 기억1</h2>
 							<p>저자 베르나르 베르베르|역자 전미연|열린책들 |2020.05.30</p>
 							<p>페이지 400</p>
@@ -1304,7 +1314,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z2-5.PNG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z2-5.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>1. 기억2</h2>
 							<p>저자 베르나르 베르베르|역자 전미연|열린책들 |2020.05.30</p>
 							<p>페이지 400</p>
@@ -1316,14 +1326,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 				</ul>
 		</div>
 		<div id="tab3">
-			<h2 style = "color:gray; padding-left:10px;">알라딘</h2>
 				<ul data-role="listview" data-inset="true">
 					<li data-role="list-divider">어린이
 						 <p class="ui-li-aside">2020/6/1~7</p>
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z3-1.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z3-1.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>1. 마법천자문 48</h2>
 							<p>저자 김현수|북이십일 아울북 |2020.05.20</p>
 							<p>페이지 164</p>
@@ -1334,7 +1343,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z3-2.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z3-2.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>2. 장군이네 떡집_만복이네 떡집 2 (난 책읽기가 좋아 시리즈)</h2>
 							<p>글 김리리 |그림 이승현|비룡소 |2020.04.29</p>
 							<p>페이지 84</p>
@@ -1345,7 +1354,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z3-3.JPG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z3-3.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>3. 소원 떡집_만복이네 떡집 3 (난 책읽기가 좋아 시리즈)</h2>
 							<p>글 김리리 |그림 이승현|비룡소 |2020.04.29</p>
 							<p>페이지 84</p>
@@ -1356,7 +1365,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z3-4.PNG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z3-4.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>4. Go Go 카카오프렌즈 14</h2>
 							<p>저자 김미영|북이십일 아울북 |2020.05.20</p>
 							<p>페이지 176</p>
@@ -1367,7 +1376,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 					</li>
 					<li>
 						<a href="#">
-							<img src= "image/z3-5.PNG" style="padding-top: 10px; padding-left: 10px;">
+							<img src= "image/z3-5.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 							<h2>5. 만복이네 떡집 3 </h2>
 							<p>글 김리리 |그림 이승현|비룡소 |2020.04.29</p>
 							<p>페이지 84</p>
@@ -1379,14 +1388,13 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 				</ul>
 		</div>
 		<div id="tab4">
-		<h2 style = "color:gray; padding-left:10px;">알라딘</h2>
 		<ul data-role="listview" data-inset="true">
 		<li data-role="list-divider">인문학
 			 <p class="ui-li-aside">2020/6/1~7</p>
 		</li>
 		<li>
 			<a href="#">
-				<img src= "image/z4-1.PNG" style="padding-top: 10px; padding-left: 10px;">
+				<img src= "image/z4-1.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 				<h2>1. 이상하고 자유로운 할머니가 되고 싶어</h2>
 				<p>저자 박서영|어크로스 |2020.05.12</p>
 				<p>페이지 216</p>
@@ -1397,7 +1405,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		</li>
 		<li>
 			<a href="#">
-				<img src= "image/z4-2.PNG" style="padding-top: 10px; padding-left: 10px;">
+				<img src= "image/z4-2.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 				<h2>2. 이야기의 탄생</h2>
 				<p>저자 윌 스토|역자 문희경|흐름출판 |2020.05.15</p>
 				<p>페이지 336</p>
@@ -1408,7 +1416,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		</li>
 		<li>
 			<a href="#">
-				<img src= "image/z4-3.PNG" style="padding-top: 10px; padding-left: 10px;">
+				<img src= "image/z4-3.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 				<h2>3. 트라우마 사전</h2>
 				<p>저자 안젤라 애커만, 베카 푸글리시|역자 임상훈|윌북 |2020.04.20</p>
 				<p>페이지 508</p>
@@ -1419,7 +1427,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		</li>
 		<li>
 			<a href="#">
-				<img src= "image/z4-4.JPG" style="padding-top: 10px; padding-left: 10px;">
+				<img src= "image/z4-4.JPG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 				<h2>4. 지적 대화를 위한 넓고 얕은 지식 0</h2>
 				<p>저자 채사장|웨일북(whalebooks) |2019.12.24</p>
 				<p>페이지 556</p>
@@ -1430,7 +1438,7 @@ Rakivant는 팟캐스트에서 “블로그 게시물, 트위터, 혹은 페이�
 		</li>
 		<li>
 			<a href="#">
-				<img src= "image/z4-5.PNG" style="padding-top: 10px; padding-left: 10px;">
+				<img src= "image/z4-5.PNG" style="padding-top: 10px; padding-left: 10px;"  onclick="window.open(this.src)">
 				<h2>5. 공간이 만든 공간 </h2>
 				<p>저자 유현준|을유문화사 |2020.04.30</p>
 				<p>페이지 416</p>
